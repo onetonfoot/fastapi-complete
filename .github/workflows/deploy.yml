@@ -21,9 +21,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ~
-            docker-compose down
+            docker compose down
             rm -rf fastapi-complete
             docker rmi -f $(docker images -aq)
             git clone https://github.com/dycw/fastapi-complete.git
             cd fastapi-complete
-            docker-compose up -d
+            docker compose up -d
