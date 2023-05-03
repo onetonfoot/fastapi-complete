@@ -17,7 +17,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: registry.digitalocean.com/doms-repo
-          username: registry.digitalocean.com/doms-repo
+          username: onetonfoot
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
         uses: docker/build-push-action@v4
